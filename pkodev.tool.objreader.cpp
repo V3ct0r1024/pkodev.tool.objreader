@@ -126,13 +126,13 @@ int main(int argc, char** argv)
 
     for (const auto& [nSectionIdx, aObjects] : mSections)
     {
-        const int nSectionX = nSectionIdx % nSectionCntX * nSectionWidth * 100u;
-        const int nSectionY = nSectionIdx / nSectionCntY * nSectionHeight * 100u;
+        const unsigned int nSectionX = nSectionIdx % nSectionCntX * nSectionWidth * 100u;
+        const unsigned int nSectionY = nSectionIdx / nSectionCntY * nSectionHeight * 100u;
 
         for (const auto& Object : aObjects)
         {
-            const int nObjectX = (Object.nX + nSectionX) / 100u;
-            const int nObjectY = (Object.nY + nSectionY) / 100u;
+            const unsigned int nObjectX = (Object.nX + nSectionX) / 100u;
+            const unsigned int nObjectY = (Object.nY + nSectionY) / 100u;
 
             std::cout << ++nCounter << '.'
                 << "\t" << GetObjectID(Object.nTypeID)
